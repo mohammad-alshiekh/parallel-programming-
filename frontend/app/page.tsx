@@ -10,8 +10,7 @@ export default function Home() {
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token && !user) {
-      // Token exists but user not loaded
-    }
+     }
   }, []);
 
   return (
