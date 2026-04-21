@@ -361,9 +361,7 @@ export default function Tests() {
           <div>
             <div className="bg-white p-8 rounded-lg shadow-lg mb-6 border-2 border-indigo-200">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">🏃 Race Condition Test</h2>
-              <p className="text-gray-700 mb-6">
-                Tests optimistic locking with 10 concurrent requests trying to reserve the same product. Verifies that the system protects data from race conditions and maintains data integrity.
-              </p>
+              
               <div className="space-y-3 mb-6">
                 <div className="flex items-start gap-3">
                   <span className="text-xl">🎯</span>
@@ -403,9 +401,7 @@ export default function Tests() {
           <div>
             <div className="bg-white p-8 rounded-lg shadow-lg mb-6 border-2 border-green-200">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">⚙️ Concurrency Control Test</h2>
-              <p className="text-gray-700 mb-6">
-                Simulates 100 concurrent order requests to test resource management under high load. Measures performance metrics like requests per second and verifies system stability.
-              </p>
+               
               <div className="space-y-3 mb-6">
                 <div className="flex items-start gap-3">
                   <span className="text-xl">🎯</span>
@@ -441,55 +437,7 @@ export default function Tests() {
             {concurrencyControlResult && <TestResultCard result={concurrencyControlResult} />}
           </div>
         </div>
-
-        {/* Analysis Section */}
-        <div className="mt-12 bg-white p-8 rounded-lg shadow-lg border-l-4 border-indigo-600">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">📚 Test Analysis</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">Race Condition Test</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li className="flex gap-2">
-                  <span>✓</span>
-                  <span><strong>What it tests:</strong> Optimistic locking mechanism</span>
-                </li>
-                <li className="flex gap-2">
-                  <span>✓</span>
-                  <span><strong>Why it matters:</strong> Prevents data corruption under concurrent access</span>
-                </li>
-                <li className="flex gap-2">
-                  <span>✓</span>
-                  <span><strong>Success criteria:</strong> 100% success rate with correct final quantity</span>
-                </li>
-                <li className="flex gap-2">
-                  <span>✓</span>
-                  <span><strong>Version tracking:</strong> Each transaction increments the version number</span>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">Concurrency Control Test</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li className="flex gap-2">
-                  <span>✓</span>
-                  <span><strong>What it tests:</strong> Resource management under load</span>
-                </li>
-                <li className="flex gap-2">
-                  <span>✓</span>
-                  <span><strong>Why it matters:</strong> Ensures system stability with many simultaneous operations</span>
-                </li>
-                <li className="flex gap-2">
-                  <span>✓</span>
-                  <span><strong>Success criteria:</strong> High throughput with no data loss</span>
-                </li>
-                <li className="flex gap-2">
-                  <span>✓</span>
-                  <span><strong>Performance metric:</strong> Requests per second indicates throughput</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+ 
       </div>
     </div>
   );
