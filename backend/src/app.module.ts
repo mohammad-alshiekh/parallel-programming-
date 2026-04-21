@@ -21,6 +21,8 @@ import { ConcurrencyControlService } from './common/concurrency-control.service'
 import { QueueService } from './common/queue.service';
 import { InvoiceProcessor } from './invoices/invoice.processor';
 import { NotificationProcessor } from './notifications/notification.processor';
+import { TestsController } from './tests/tests.controller';
+import { TestsService } from './tests/tests.service';
 
 @Module({
   imports: [
@@ -42,7 +44,7 @@ import { NotificationProcessor } from './notifications/notification.processor';
       { name: 'notifications' },
     ),
   ],
-  controllers: [AppController, AuthController, ProductsController, OrdersController],
+  controllers: [AppController, AuthController, ProductsController, OrdersController, TestsController],
   providers: [
     AppService,
     AuthService,
@@ -53,6 +55,7 @@ import { NotificationProcessor } from './notifications/notification.processor';
     QueueService,
     InvoiceProcessor,
     NotificationProcessor,
+    TestsService,
   ],
 })
 export class AppModule {}

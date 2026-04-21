@@ -65,9 +65,9 @@ export default function Cart() {
       </nav>
 
       <div className="max-w-7xl mx-auto px-4 py-12">
-        <h1 className="text-3xl font-bold mb-8">Shopping Cart</h1>
+        <h1 className="text-3xl font-bold mb-8 text-gray-900">Shopping Cart</h1>
 
-        {error && <div className="bg-red-100 text-red-700 p-3 rounded mb-4">{error}</div>}
+        {error && <div className="bg-red-50 text-red-800 p-3 rounded mb-4 border border-red-200">{error}</div>}
 
         {items.length === 0 ? (
           <div className="text-center py-12">
@@ -82,7 +82,7 @@ export default function Cart() {
               {items.map((item) => (
                 <div key={item.productId} className="bg-white p-4 rounded-lg shadow-lg mb-4 flex justify-between items-center">
                   <div>
-                    <p className="font-bold">Product ID: {item.productId}</p>
+                    <p className="font-bold text-gray-900">Product ID: {item.productId}</p>
                     <p className="text-gray-700">Quantity: {item.quantity}</p>
                     <p className="text-indigo-600 font-bold">${item.price * item.quantity}</p>
                   </div>
@@ -97,7 +97,7 @@ export default function Cart() {
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-lg h-fit">
-              <h2 className="text-xl font-bold mb-4">Order Summary</h2>
+              <h2 className="text-xl font-bold mb-4 text-gray-900">Order Summary</h2>
               <div className="border-t pt-4">
                 <div className="flex justify-between mb-4">
                   <span>Subtotal:</span>

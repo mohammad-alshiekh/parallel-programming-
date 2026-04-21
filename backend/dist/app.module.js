@@ -30,6 +30,8 @@ const concurrency_control_service_1 = require("./common/concurrency-control.serv
 const queue_service_1 = require("./common/queue.service");
 const invoice_processor_1 = require("./invoices/invoice.processor");
 const notification_processor_1 = require("./notifications/notification.processor");
+const tests_controller_1 = require("./tests/tests.controller");
+const tests_service_1 = require("./tests/tests.service");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -51,7 +53,7 @@ exports.AppModule = AppModule = __decorate([
             }),
             bull_1.BullModule.registerQueue({ name: 'invoices' }, { name: 'notifications' }),
         ],
-        controllers: [app_controller_1.AppController, auth_controller_1.AuthController, products_controller_1.ProductsController, orders_controller_1.OrdersController],
+        controllers: [app_controller_1.AppController, auth_controller_1.AuthController, products_controller_1.ProductsController, orders_controller_1.OrdersController, tests_controller_1.TestsController],
         providers: [
             app_service_1.AppService,
             auth_service_1.AuthService,
@@ -62,6 +64,7 @@ exports.AppModule = AppModule = __decorate([
             queue_service_1.QueueService,
             invoice_processor_1.InvoiceProcessor,
             notification_processor_1.NotificationProcessor,
+            tests_service_1.TestsService,
         ],
     })
 ], AppModule);

@@ -42,9 +42,9 @@ export default function Register() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-        <h1 className="text-3xl font-bold text-center mb-6">Register</h1>
+        <h1 className="text-3xl font-bold text-center mb-6 text-gray-900">Register</h1>
 
-        {error && <div className="bg-red-100 text-red-700 p-3 rounded mb-4">{error}</div>}
+        {error && <div className="bg-red-50 text-red-800 p-3 rounded mb-4 border border-red-200">{error}</div>}
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
@@ -52,7 +52,7 @@ export default function Register() {
             placeholder="First Name"
             value={formData.firstName}
             onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-600"
             required
           />
           <input
@@ -60,7 +60,7 @@ export default function Register() {
             placeholder="Last Name"
             value={formData.lastName}
             onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-600"
             required
           />
           <input
@@ -68,7 +68,7 @@ export default function Register() {
             placeholder="Email"
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-600"
             required
           />
           <input
@@ -76,7 +76,7 @@ export default function Register() {
             placeholder="Password"
             value={formData.password}
             onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-600"
             required
           />
           <button
@@ -88,9 +88,9 @@ export default function Register() {
           </button>
         </form>
 
-        <p className="text-center mt-4">
+        <p className="text-center mt-4 text-gray-600">
           Already have an account?{' '}
-          <Link href="/login" className="text-indigo-600 hover:text-indigo-800">
+          <Link href="/login" className="text-indigo-600 font-semibold hover:text-indigo-800 transition-colors">
             Login
           </Link>
         </p>
